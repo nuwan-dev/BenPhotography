@@ -17,7 +17,7 @@ html body .ben-top-nav-container {
   position: fixed;
   background-color: rgba(0, 0, 0, 0.6);
   max-height: 100px;
-  z-index: 10;
+  z-index: 999;
 }
 html body .ben-top-nav-container .top-nav {
   display: flex;
@@ -90,6 +90,9 @@ html body .ben-hero-container .carousel .list .item {
   position: absolute;
   inset: 0 0 0 0;
 }
+html body .ben-hero-container .carousel .list .item:first-child {
+  z-index: 1;
+}
 html body .ben-hero-container .carousel .list img {
   width: 100%;
   height: 100%;
@@ -111,7 +114,8 @@ html body .ben-hero-container .carousel .list .content .author {
   font-weight: bold;
   letter-spacing: 10px;
 }
-html body .ben-hero-container .carousel .list .content .title, html body .ben-hero-container .carousel .list .content .topic {
+html body .ben-hero-container .carousel .list .content .title,
+html body .ben-hero-container .carousel .list .content .topic {
   font-weight: bold;
   font-size: 5em;
   line-height: 1.3em;
@@ -129,11 +133,85 @@ html body .ben-hero-container .carousel .list .content .buttons {
 html body .ben-hero-container .carousel .list .content .buttons button {
   letter-spacing: 3px;
   font-weight: 500;
+  border: 1px solid #fff;
 }
-html body .ben-hero-container .carousel .list .content .buttons button:nth-chlid(2) {
+html body .ben-hero-container .carousel .list .content .buttons button:last-child {
   background-color: transparent;
   color: #fff;
-  border-color: #fff;
+  border: 1px solid #fff;
+}
+html body .ben-hero-container .carousel .list .content .author,
+html body .ben-hero-container .carousel .list .content .title,
+html body .ben-hero-container .carousel .list .content .topic,
+html body .ben-hero-container .carousel .list .content .buttons,
+html body .ben-hero-container .carousel .list .content .des {
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent 0.5s 1s linear forwards;
+}
+@keyframes showContent {
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+html body .ben-hero-container .carousel .thumbnail {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  width: max-content;
+  z-index: 100;
+  display: flex;
+  gap: 20px;
+}
+html body .ben-hero-container .carousel .thumbnail .item {
+  width: 150px;
+  height: 220px;
+  flex-shrink: 0;
+  position: relative;
+}
+html body .ben-hero-container .carousel .thumbnail .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+html body .ben-hero-container .carousel .thumbnail .item .content {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+}
+html body .ben-hero-container .carousel .thumbnail .item .content .title {
+  font-weight: bold;
+}
+html body .ben-hero-container .carousel .arrows {
+  position: absolute;
+  top: 80%;
+  right: 62%;
+  width: 300px;
+  max-width: 30%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+html body .ben-hero-container .carousel .arrows button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(238, 238, 238, 0.2666666667);
+  border: none;
+  font-size: large;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.5s;
+  cursor: pointer;
+}
+html body .ben-hero-container .carousel .arrows button:hover {
+  background-color: #eee;
+  color: #555;
 }
 
 /*# sourceMappingURL=Main.css.map */
