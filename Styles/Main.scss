@@ -27,28 +27,65 @@ html {
                 margin: auto;
                 max-width: 1380px;
 
-                .top-nav-menu {
-                    li {
-                        list-style: none;
+                .top-nav-sec {
+                    .top-nav-menu {
+                        display: none;
 
-                        a {
-                            text-decoration: none;
+                        li {
+                            list-style: none;
+
+                            a {
+                                text-decoration: none;
+                            }
                         }
                     }
-                }
 
-                .top-nav-tggl-btn {
-                    width: 73px;
-                    height: 73px;
-                    background-color: #fff;
-                    border: none;
-                    outline: none;
-                    border-radius: 50%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    flex-direction: column;
-                    cursor: pointer;
+                    .top-nav-tggl-btn {
+                        width: 73px;
+                        height: 73px;
+                        background-color: #fff;
+                        border: none;
+                        outline: none;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        cursor: pointer;
+                        position: relative;
+
+                        span {
+                            // background-color: #000;
+                            background-image: url('/Assets/Icons/line.svg');
+                            background-size: contain;
+                            background-position: center;
+                            width: 55px;
+                            height: 5px;
+                            display: block;
+                            position: absolute;
+                            transition: transform 0.5s, width 0.5s;
+                        }
+
+                        .line-1 {
+                            transform: translateY(-12px);
+                        }
+
+                        .line-3 {
+                            transform: translateY(12px);
+                        }
+
+                        .line-1-active {
+                            transform: rotate(-45deg) !important;
+                        }
+
+                        .line-2-active {
+                            width: 0 !important;
+                        }
+
+                        .line-3-active {
+                            transform: rotate(45deg) !important;
+                        }
+                    }
                 }
             }
         }

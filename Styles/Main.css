@@ -24,13 +24,16 @@ html body .ben-top-nav-container .top-nav {
   margin: auto;
   max-width: 1380px;
 }
-html body .ben-top-nav-container .top-nav .top-nav-menu li {
+html body .ben-top-nav-container .top-nav .top-nav-sec .top-nav-menu {
+  display: none;
+}
+html body .ben-top-nav-container .top-nav .top-nav-sec .top-nav-menu li {
   list-style: none;
 }
-html body .ben-top-nav-container .top-nav .top-nav-menu li a {
+html body .ben-top-nav-container .top-nav .top-nav-sec .top-nav-menu li a {
   text-decoration: none;
 }
-html body .ben-top-nav-container .top-nav .top-nav-tggl-btn {
+html body .ben-top-nav-container .top-nav .top-nav-sec .top-nav-tggl-btn {
   width: 73px;
   height: 73px;
   background-color: #fff;
@@ -42,6 +45,32 @@ html body .ben-top-nav-container .top-nav .top-nav-tggl-btn {
   justify-content: center;
   flex-direction: column;
   cursor: pointer;
+  position: relative;
+}
+html body .ben-top-nav-container .top-nav .top-nav-sec .top-nav-tggl-btn span {
+  background-image: url("/Assets/Icons/line.svg");
+  background-size: contain;
+  background-position: center;
+  width: 55px;
+  height: 5px;
+  display: block;
+  position: absolute;
+  transition: transform 0.5s, width 0.5s;
+}
+html body .ben-top-nav-container .top-nav .top-nav-sec .top-nav-tggl-btn .line-1 {
+  transform: translateY(-12px);
+}
+html body .ben-top-nav-container .top-nav .top-nav-sec .top-nav-tggl-btn .line-3 {
+  transform: translateY(12px);
+}
+html body .ben-top-nav-container .top-nav .top-nav-sec .top-nav-tggl-btn .line-1-active {
+  transform: rotate(-45deg) !important;
+}
+html body .ben-top-nav-container .top-nav .top-nav-sec .top-nav-tggl-btn .line-2-active {
+  width: 0 !important;
+}
+html body .ben-top-nav-container .top-nav .top-nav-sec .top-nav-tggl-btn .line-3-active {
+  transform: rotate(45deg) !important;
 }
 
 /*# sourceMappingURL=Main.css.map */
