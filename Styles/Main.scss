@@ -187,6 +187,22 @@ html {
                             }
 
                         }
+
+                        .title {
+                            animation-delay: 1.2s;
+                        }
+
+                        .topic {
+                            animation-delay: 1.4s;
+                        }
+
+                        .des {
+                            animation-delay: 1.6s;
+                        }
+
+                        .buttons {
+                            animation-delay: 1.8s;
+                        }
                     }
                 }
 
@@ -246,6 +262,7 @@ html {
                         font-weight: bold;
                         transition: 0.5s;
                         cursor: pointer;
+                        z-index: 100;
                     }
 
                     button:hover {

@@ -157,6 +157,18 @@ html body .ben-hero-container .carousel .list .content .des {
     transform: translateY(0);
   }
 }
+html body .ben-hero-container .carousel .list .content .title {
+  animation-delay: 1.2s;
+}
+html body .ben-hero-container .carousel .list .content .topic {
+  animation-delay: 1.4s;
+}
+html body .ben-hero-container .carousel .list .content .des {
+  animation-delay: 1.6s;
+}
+html body .ben-hero-container .carousel .list .content .buttons {
+  animation-delay: 1.8s;
+}
 html body .ben-hero-container .carousel .thumbnail {
   position: absolute;
   bottom: 50px;
@@ -208,6 +220,7 @@ html body .ben-hero-container .carousel .arrows button {
   font-weight: bold;
   transition: 0.5s;
   cursor: pointer;
+  z-index: 100;
 }
 html body .ben-hero-container .carousel .arrows button:hover {
   background-color: #eee;
