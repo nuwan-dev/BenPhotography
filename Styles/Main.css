@@ -227,6 +227,15 @@ html body .ben-hero-container .carousel .arrows button:hover {
   background-color: #eee;
   color: #555;
 }
+html body .ben-hero-container .carousel .time {
+  width: 0%;
+  height: 3px;
+  background-color: orange;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
 html body .ben-hero-container .carousel.next .list .item:nth-child(1) img {
   width: 150px;
   height: 220px;
@@ -245,6 +254,13 @@ html body .ben-hero-container .carousel.next .thumbnail {
   transform: translateX(150px);
   animation: transformThumbnail 0.5s linear 1 forwards;
 }
+html body .ben-hero-container .carousel.next .arrows button {
+  pointer-events: none;
+}
+html body .ben-hero-container .carousel.next .time {
+  width: 100%;
+  animation: timeRunning 2s linear 1 forwards;
+}
 html body .ben-hero-container .carousel.prev .list .item:nth-child(2) {
   z-index: 2;
 }
@@ -259,6 +275,20 @@ html body .ben-hero-container .carousel.prev .thumbnail .item:nth-child(1) {
   overflow: hidden;
   opacity: 0;
   animation: showThumbnail 0.5s linear 1 forwards;
+}
+html body .ben-hero-container .carousel.prev .thumbnail .item:nth-child(2) .author,
+html body .ben-hero-container .carousel.prev .thumbnail .item:nth-child(2) .title,
+html body .ben-hero-container .carousel.prev .thumbnail .item:nth-child(2) .topic,
+html body .ben-hero-container .carousel.prev .thumbnail .item:nth-child(2) .des,
+html body .ben-hero-container .carousel.prev .thumbnail .item:nth-child(2) .buttons {
+  animation: contentOut 1.5s linear 1 forwards;
+}
+html body .ben-hero-container .carousel.prev .arrows button {
+  pointer-events: none;
+}
+html body .ben-hero-container .carousel.prev .time {
+  width: 100%;
+  animation: timeRunning 2s linear 1 forwards;
 }
 @keyframes showImage {
   to {
@@ -282,6 +312,18 @@ html body .ben-hero-container .carousel.prev .thumbnail .item:nth-child(1) {
     border-radius: 20px;
     left: 50%;
     bottom: 50px;
+  }
+}
+@keyframes contentOut {
+  to {
+    transform: translateX(-150px);
+    filter: blur(20px);
+    opacity: 0;
+  }
+}
+@keyframes timeRunning {
+  to {
+    width: 0;
   }
 }
 

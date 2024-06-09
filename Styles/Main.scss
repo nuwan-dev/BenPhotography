@@ -271,6 +271,16 @@ html {
                         color: #555;
                     }
                 }
+
+                .time {
+                    width: 0%;
+                    height: 3px;
+                    background-color: orange;
+                    position: absolute;
+                    z-index: 100;
+                    top: 0;
+                    left: 0;
+                }
             }
 
             .carousel.next {
@@ -299,6 +309,17 @@ html {
                     transform: translateX(150px);
                     animation: transformThumbnail 0.5s linear 1 forwards;
                 }
+
+                .arrows {
+                    button {
+                        pointer-events: none;
+                    }
+                }
+
+                .time {
+                    width: 100%;
+                    animation: timeRunning 2s linear 1 forwards;
+                }
             }
 
             .carousel.prev {
@@ -322,6 +343,28 @@ html {
                         opacity: 0;
                         animation: showThumbnail 0.5s linear 1 forwards;
                     }
+
+                    .item:nth-child(2) {
+
+                        .author,
+                        .title,
+                        .topic,
+                        .des,
+                        .buttons {
+                            animation: contentOut 1.5s linear 1 forwards;
+                        }
+                    }
+                }
+
+                .arrows {
+                    button {
+                        pointer-events: none;
+                    }
+                }
+
+                .time {
+                    width: 100%;
+                    animation: timeRunning 2s linear 1 forwards;
                 }
             }
 
@@ -357,6 +400,20 @@ html {
                     left: 50%;
                     bottom: 50px;
 
+                }
+            }
+
+            @keyframes contentOut {
+                to {
+                    transform: translateX(-150px);
+                    filter: blur(20px);
+                    opacity: 0;
+                }
+            }
+
+            @keyframes timeRunning {
+                to {
+                    width: 0;
                 }
             }
         }
