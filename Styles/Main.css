@@ -209,6 +209,7 @@ html body .ben-hero-container .carousel .arrows {
   display: flex;
   gap: 10px;
   align-items: center;
+  z-index: 999;
 }
 html body .ben-hero-container .carousel .arrows button {
   width: 40px;
