@@ -52,7 +52,7 @@ html body .ben-top-nav-container .top-nav .top-nav-sec .top-nav-tggl-btn {
   position: relative;
 }
 html body .ben-top-nav-container .top-nav .top-nav-sec .top-nav-tggl-btn span {
-  background-image: url('url("https://nuwan-dev.github.io/BenPhotography/Assets/Icons/line.svg")');
+  background-image: url("https://nuwan-dev.github.io/BenPhotography/Assets/Icons/line.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
